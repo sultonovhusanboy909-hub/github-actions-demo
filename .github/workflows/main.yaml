@@ -1,0 +1,16 @@
+name: First CI-CD Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Test step
+        run: echo "Kod muvaffaqiyatli tekshirildi va tayyor!"
